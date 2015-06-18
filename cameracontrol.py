@@ -1,5 +1,7 @@
 #!/usr/bin/python
-
+#hooptiej on the case
+import Adafruit_I2C
+import Adafruit_PWM_Servo_Driver
 from Adafruit_PWM_Servo_Driver import PWM
 import time
 import os
