@@ -2,7 +2,7 @@
 #from pygame.locals import *
 import time
 import os
-from threading import *
+
 #Netcode?
 import socket               # Import socket module
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         # Create a socket object
@@ -11,20 +11,20 @@ port = 56565                # Reserve a port for your service.
 s.bind(('', port))        # Bind to the port
 #data = s.recv(1024).decode()
 
-class client(Thread):
-    def __init__(self, socket, address):
-        Thread.__init__(self)
-        self.sock = socket
-        self.addr = address
-        self.start()
 
-    def run(self):
-        while 1:
-            print('Client sent:', self.sock.recv(1024).decode())
-            self.sock.send(b'Oi you sent something to me')
-
-s.listen(5)
-print ('server started and listening')
-while 1:
-    clientsocket, address = s.accept()
-    client(clientsocket, address)
+print(" ")
+print ("Host name:")
+print(host)
+print (" ")
+print ("Port assigned")
+print(port)
+print ("")
+print ("Opening Socket to listen")
+s.listen(5)                 # Now wait for client connection.
+while True:
+   c, addr = s.accept()     # Establish connection with client.
+   print 'Got connection from', addr
+   c.send('Thank you for connecting')
+   data = s.recv(1024).decode()
+   print (data)
+   #c.close()                # Close the connection
