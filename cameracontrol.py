@@ -50,7 +50,7 @@ choicejoytest = 0
 pygame.init()
 pygame.joystick.init()
 pygame.joystick.Joystick(0).init()
-hattest = 1
+joyloop = 1
 
 servoposX = 0
 servoposY = 0
@@ -60,7 +60,7 @@ servoposY = servoCenter
 pwm.setPWM(14, 0, servoposX)
 pwm.setPWM(15, 0, servoposY)
             
-while hattest > 0:
+while joyloop > 0:
   #  print " "
  #   print("Monitoring X-Y on Main Stick")
 #    print " "
@@ -87,9 +87,9 @@ while hattest > 0:
             elif joypostwo < 0:
                 servoposY = servoposY - 1
             print " "
-            if servoposX >= servoMax:
+            if servoposY >= servoMax:
                 servoposY = servoMax
-            if servoposX <= servoMin:
+            if servoposY <= servoMin:
                 servoposY = servoMin
             pwm.setPWM(14, 0, servoposX)
             pwm.setPWM(15, 0, servoposY)
