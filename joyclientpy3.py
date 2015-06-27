@@ -6,15 +6,20 @@ import os
 #Netcode?
 import socket               # Import socket module
 s = socket.socket()         # Create a socket object
-host = socket.gethostname() # Get local machine name
+lochost = socket.gethostname() # Get local machine name
 port = 56565                # Reserve a port for your service.
+remhost = 192.168.1.14
 s.bind((host, port))        # Bind to the port
 print(" ")
-print ("Host name:")
-print(host)
+print ("local Host name:")
+print(lochost)
 print (" ")
 print ("Port assigned")
 print(port)
+
+s.connect((remhost, port))
+print s.recv(1024)
+s.close                     # Close the socket when done
 
 
 
