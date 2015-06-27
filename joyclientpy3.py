@@ -52,4 +52,16 @@ else:
     print ("Joypad Ready")
     print (" ")
     time.sleep(5)
-    
+    pygame.init()
+    joymotion = 1
+    while joymotion > 0:
+        for event in pygame.event.get():
+            if event.type == pygame.JOYAXISMOTION:
+                joyaxeone = pygame.joystick.Joystick(0).get_axis(0)
+                joyaxetwo = pygame.joystick.Joystick(0).get_axis(1)
+                joyaxethree = pygame.joystick.Joystick(0).get_axis(2)
+                joyaxefour = pygame.joystick.Joystick(0).get_axis(3)
+            print (joyaxeone)
+            print (joyaxetwo)
+            print (joyaxethree)
+            print (joyaxefour)
