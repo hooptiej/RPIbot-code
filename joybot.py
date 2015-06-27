@@ -5,10 +5,12 @@ import os
 
 #Netcode?
 import socket               # Import socket module
-s = socket.socket()         # Create a socket object
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         # Create a socket object
 host = socket.gethostname() # Get local machine name
 port = 56565                # Reserve a port for your service.
 s.bind((host, port))        # Bind to the port
+
+
 print(" ")
 print ("Host name:")
 print(host)

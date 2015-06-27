@@ -8,8 +8,8 @@ import socket               # Import socket module
 s = socket.socket()         # Create a socket object
 lochost = socket.gethostname() # Get local machine name
 port = 56565                # Reserve a port for your service.
-remhost = 192.168.1.14
-s.bind((host, port))        # Bind to the port
+remhost = ("192.168.1.14")
+#s.bind((lochost, port))        # Bind to the port
 print(" ")
 print ("local Host name:")
 print(lochost)
@@ -17,8 +17,10 @@ print (" ")
 print ("Port assigned")
 print(port)
 
+print ("attempting to connec to:")
+print (remhost, port)
 s.connect((remhost, port))
-print s.recv(1024)
+print (s.recv(1024))
 s.close                     # Close the socket when done
 
 
