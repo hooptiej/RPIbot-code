@@ -5,7 +5,7 @@ import os
 
 #Netcode?
 import socket               # Import socket module
-s = socket.socket()         # Create a socket object
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         # Create a socket object
 lochost = socket.gethostname() # Get local machine name
 port = 56565                # Reserve a port for your service.
 remhost = ("192.168.1.14")
@@ -65,3 +65,6 @@ else:
             #print (joyaxetwo)
             #print (joyaxethree)
             #print (joyaxefour)
+            s.connect((remhost, port))
+            s.send(joyaxeone)
+            print (s.recv(1024))
