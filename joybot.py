@@ -28,3 +28,4 @@ while True:
    data = s.recv(1024).decode()
    print (data)
    #c.close()                # Close the connection
+   #some changes to commit
