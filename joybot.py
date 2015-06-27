@@ -8,7 +8,7 @@ import socket               # Import socket module
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         # Create a socket object
 host = socket.gethostname() # Get local machine name
 port = 56565                # Reserve a port for your service.
-s.bind(('', port))        # Bind to the port
+s.bind(("", port))        # Bind to the port
 #data = s.recv(1024).decode()
 
 
@@ -22,7 +22,7 @@ print ("")
 print ("Opening Socket to listen")
 s.listen(5)# Now wait for client connection.
 while True:
-   print 'Got connection from', addr
+   print ('Got connection from', addr)
    c, addr = s.accept()     # Establish connection with client.                
    c.send('Thank you for connecting')
    data = s.recv(1024).decode()
