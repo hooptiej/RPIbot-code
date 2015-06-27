@@ -21,7 +21,7 @@ print ("attempting to connec to:")
 print (remhost, port)
 s.connect((remhost, port))
 print (s.recv(1024))
-s.close                     # Close the socket when done
+#s.close                     # Close the socket when done
 
 
 
@@ -61,7 +61,7 @@ else:
                 joyaxetwo = pygame.joystick.Joystick(0).get_axis(1)
                 joyaxethree = pygame.joystick.Joystick(0).get_axis(2)
                 joyaxefour = pygame.joystick.Joystick(0).get_axis(3)
-            print (joyaxeone)
-            print (joyaxetwo)
-            print (joyaxethree)
-            print (joyaxefour)
+            #print (joyaxeone)
+            #print (joyaxetwo)
+            #print (joyaxethree)
+            #print (joyaxefour)
