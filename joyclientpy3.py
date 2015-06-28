@@ -4,7 +4,7 @@ import pygame
 from pygame.locals import *
 import time
 import os
-
+cclear = "\n" * 1000
 #Netcode?
 import socket               # Import socket module
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         # Create a socket object
@@ -59,6 +59,7 @@ else:
     joymotion = 1
     while joymotion > 0:
         for event in pygame.event.get():
+            clear()
             if event.type == pygame.JOYAXISMOTION:
                 joyaxeone = str(pygame.joystick.Joystick(0).get_axis(0))
                 joyaxetwo = str(pygame.joystick.Joystick(0).get_axis(1))
@@ -73,3 +74,4 @@ else:
             s.send(joyd)
             frameref = (s.recv(1024))
             print (frameref)
+            print ("Control Pad Data Acknowledged")
