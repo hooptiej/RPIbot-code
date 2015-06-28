@@ -36,6 +36,7 @@ stickname = (pygame.joystick.Joystick(0).get_name())
 if stickname == 0:
     print ("BORKED!")
 else:
+#we probbaly dont need this any more
     print ("Joystick detected")
     print(" ")
     time.sleep(1)
@@ -53,7 +54,7 @@ else:
     print (" ")
     print ("Joypad Ready")
     print (" ")
-    #time.sleep(5)
+    #time.sleep(2)
     pygame.init()
     joymotion = 1
     while joymotion > 0:
