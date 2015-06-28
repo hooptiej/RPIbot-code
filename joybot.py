@@ -59,6 +59,10 @@ while True:
     printref = str(frameref)
     c.send(printref.encode('ascii'))
     print("Rx!")
+    print joyaxeone
+    print joyaxetwo
+    print joyaxethree
+    print joyaxefour
     #Servo Positioning 
     campan = 0
     camtilt = 0
