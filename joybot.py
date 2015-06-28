@@ -67,13 +67,11 @@ while True:
     if joyaxeone  > 0:
         camtilt = camtilt + 1
     elif joyaxeone < 0:
-        camtilt = camtilt - 1 
-    else
+        camtilt = camtilt - 1
     if joyaxetwo  > 0:
         campan = campan + 1
     elif joyaxerwo < 0:
-        campan = campan - 1 
-    else
+        campan = campan - 1
     pwm.setPWM(14, 0, camtilt)
     pwm.setPWM(15, 0, campan)
     #c.close()                # Close the connection
