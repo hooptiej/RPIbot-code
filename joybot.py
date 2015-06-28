@@ -75,7 +75,7 @@ while x > 0:
     roundtwo = float("{:.1f}".format(joyaxeone))
     roundthree = float("{:.1f}".format(joyaxethree))
     roundfour = float("{:.1f}".format(joyaxefour))
-    print ("steering Position", roundone)
+    print roundone
     print roundtwo
     print roundthree
     print roundfour
@@ -109,6 +109,8 @@ while x > 0:
     pwm.setPWM(0, 0, throt)
     pwm.setPWM(1, 0, steer)
     print "servo pos set?"
-    print camtilt
-    print campan
+    print ("Camera Tilt Servo Position", camtilt)
+    print ("Camera Pan Servo Position", campan)
+    print ("Steering Servo Position", steer)
+    print ("THrottle Position on ESC", throt)
     #c.close()                # Close the connection
