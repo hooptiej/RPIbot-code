@@ -64,14 +64,28 @@ while True:
     camtilt = 0
     campan = servoCenter
     camtilt = servoCenter
+    throt = 0
+    steer = 0
+    throt = servoCenter
+    steer = servoCenter
     if joyaxeone  > 0:
         camtilt = camtilt + 1
     elif joyaxeone < 0:
         camtilt = camtilt - 1
     if joyaxetwo  > 0:
         campan = campan + 1
-    elif joyaxerwo < 0:
+    elif joyaxetwo < 0:
         campan = campan - 1
+    if joyaxethree  > 0:
+        throt = throt + 1
+    elif joyaxethree < 0:
+        throt = throt - 1
+    if joyaxefour  > 0:
+        steer = steer + 1
+    elif joyaxefour < 0:
+        steer = steer - 1
     pwm.setPWM(14, 0, camtilt)
     pwm.setPWM(15, 0, campan)
+    pwm.setPWM(0, 0, throt)
+    pwm.setPWM(1, 0, steer)
     #c.close()                # Close the connection
