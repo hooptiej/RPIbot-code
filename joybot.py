@@ -30,7 +30,8 @@ while True:
    #print ('Got connection from', addr)              
    joydata = c.recv(2048)#.decode()
    joyd = pickle.loads(joydata)
-   pprint.pprint(joyd)
+   #pprint.pprint(joyd)
+   print(joyd[1])
    #rxmess = (joydata.encode('ascii'))
    frameref = 0
    frameref = (frameref + 1)
