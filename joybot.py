@@ -91,8 +91,8 @@ while x > 0:
         steer = steer + 1
     elif joyaxefour < 0:
         steer = steer - 1
-    pwm.setPWM(15, 0, camtilt)
-    pwm.setPWM(14, 0, campan)
+    pwm.setPWM(14, 0, camtilt)
+    pwm.setPWM(15, 0, campan)
     pwm.setPWM(0, 0, throt)
     pwm.setPWM(1, 0, steer)
     print "servo pos set?"
