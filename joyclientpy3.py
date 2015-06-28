@@ -69,7 +69,7 @@ else:
             #print (joyaxethree)
             #print (joyaxefour)
             joydata = {1:joyaxeone,2:joyaxetwo,3:joyaxethree,4:joyaxefour}
-            joyd = pickle.dumps(joydata)
+            joyd = pickle.dumps(joydata,protocol=2)
             s.send(joyd)
             frameref = (s.recv(1024))
             print (frameref)
