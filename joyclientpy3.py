@@ -61,7 +61,7 @@ else:
                 joyaxetwo = str(pygame.joystick.Joystick(0).get_axis(1))
                 joyaxethree = str(pygame.joystick.Joystick(0).get_axis(2))
                 joyaxefour = str(pygame.joystick.Joystick(0).get_axis(3))
-            #print (joyaxeone)
+            print (joyaxeone)
             #print (joyaxetwo)
             #print (joyaxethree)
             #print (joyaxefour)
