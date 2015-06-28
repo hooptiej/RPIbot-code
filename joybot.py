@@ -26,7 +26,7 @@ c, addr = s.accept()     # Establish connection with client.
 c.send('Connected to RasPi Bot') 
 while True:
    #print ('Got connection from', addr)              
-   joydata = c.recv(1024).decode()
+   joydata = c.recv(1024)#.decode()
    joyd = pickle.loads(joydata)
    print (joydata)
    #rxmess = (joydata.encode('ascii'))
