@@ -47,8 +47,9 @@ s.listen(5)# Now wait for client connection.
 c, addr = s.accept()     # Establish connection with client. 
 cm = 'Connected to RasPi Bot'
 c.send(cm.encode('ascii')) 
-print ('Controller connected from', addr) 
-while True:             
+print ('Controller connected from', addr)
+x = 1
+while x > 0:             
     joydata = c.recv(2048)#.decode()
     joyd = pickle.loads(joydata)
     joyaxeone = (joyd[1]) #camera tilt left stick
