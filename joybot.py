@@ -21,9 +21,9 @@ print(port)
 print ("")
 print ("Opening Socket to listen")
 s.listen(5)# Now wait for client connection.
+c, addr = s.accept()     # Establish connection with client.  
 while True:
-   #print ('Got connection from', addr)
-   c, addr = s.accept()     # Establish connection with client.                
+   #print ('Got connection from', addr)              
    c.send('Thank you for connecting')
    joydata = c.recv(1024).decode()
    print (joydata)
