@@ -104,6 +104,14 @@ while x > 0:
         campan = servoMax
     if campan <= servoMin:
         campan = servoMin
+    if steer >= servoMax:
+        steer = servoMax
+    if steer <= servoMin:
+        steer = servoMin
+    if throt >= servoMax:
+        throt = servoMax
+    if throt <= servoMin:
+        throt = servoMin
     pwm.setPWM(15, 0, camtilt)
     pwm.setPWM(14, 0, campan)
     pwm.setPWM(0, 0, throt)
