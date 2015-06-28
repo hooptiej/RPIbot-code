@@ -89,9 +89,9 @@ while x > 0:
     elif roundtwo < 0:
         campan = campan + 5
     if roundthree > 0:
-        throt = throt + 1
+        throt = throt + 5
     elif roundthree < 0:
-        throt = throt - 1
+        throt = throt - 5
     if roundfour > 0:
         steer = steer + 1
     elif roundfour < 0:
