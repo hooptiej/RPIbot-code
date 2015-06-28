@@ -100,7 +100,7 @@ while x > 0:
     elif roundthree < (0 - 0.5):
         throt = 500
     elif roundthree == 0:
-        throt = 375
+        throt = 390
     if roundfour > 0:
         steer = steer + 8
     elif roundfour < 0:
