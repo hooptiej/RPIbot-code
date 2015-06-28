@@ -72,9 +72,9 @@ while x > 0:
     c.send(printref.encode('ascii'))
     print("Rx!")
     roundone = float("{:.1f}".format(joyaxeone))
-    roundtwo = ("{:.1f}".format(joyaxetwo))
-    roundthree = ("{:.1f}".format(joyaxethree))
-    roundfour = ("{:.1f}".format(joyaxefour))
+    roundtwo = float("{:.1f}".format(joyaxetwo))
+    roundthree = float("{:.1f}".format(joyaxethree))
+    roundfour = float("{:.1f}".format(joyaxefour))
     print roundone
     print roundtwo
     print roundthree
@@ -104,8 +104,8 @@ while x > 0:
         campan = servoMax
     if campan <= servoMin:
         campan = servoMin
-    pwm.setPWM(14, 0, camtilt)
-    pwm.setPWM(15, 0, campan)
+    pwm.setPWM(15, 0, camtilt)
+    pwm.setPWM(14, 0, campan)
     pwm.setPWM(0, 0, throt)
     pwm.setPWM(1, 0, steer)
     print "servo pos set?"
