@@ -94,4 +94,6 @@ while x > 0:
     pwm.setPWM(0, 0, throt)
     pwm.setPWM(1, 0, steer)
     print "servo pos set?"
+    print campan
+    print camtilt
     #c.close()                # Close the connection
