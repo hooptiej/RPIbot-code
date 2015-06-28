@@ -62,10 +62,10 @@ steer = servoCenter
 while x > 0:             
     joydata = c.recv(2048)#.decode()
     joyd = pickle.loads(joydata)
-    joyaxeone = (joyd[1]) #camera tilt left stick
-    joyaxetwo = (joyd[2]) #cam tilt left stick 
-    joyaxethree = (joyd[3]) #throttle - right stick
-    joyaxefour = (joyd[4]) #steering servo - right stick
+    joyaxeone = float(joyd[1]) #camera tilt left stick
+    joyaxetwo = float(joyd[2]) #cam tilt left stick 
+    joyaxethree = float(joyd[3]) #throttle - right stick
+    joyaxefour = float(joyd[4]) #steering servo - right stick
     frameref = "ack"
     printref = str(frameref)
     c.send(printref.encode('ascii'))
@@ -75,13 +75,13 @@ while x > 0:
     print joyaxethree
     print joyaxefour
     #Servo Positioning 
-    if joyaxeone = (0 - 1):
+    if joyaxeone < 0:
         camtilt = camtilt + 1
-    elif joyaxeone = 1:
+    elif joyaxeone > 0:
         camtilt = camtilt - 1
-    if joyaxetwo  = (0 - 1):
+    if joyaxetwo  < 0:
         campan = campan - 1
-    elif joyaxetwo =1:
+    elif joyaxetwo > 0:
         campan = campan + 1
     if joyaxethree > 0:
         throt = throt + 1
