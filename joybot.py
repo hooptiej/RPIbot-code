@@ -5,7 +5,7 @@ import pickle
 import Adafruit_I2C
 import Adafruit_PWM_Servo_Driver
 from Adafruit_PWM_Servo_Driver import PWM
-clear = "\n" * 1000
+clear = lambda : os.system('tput reset')
 
 # Initialize the Servo Controller
 pwm = PWM(0x40)

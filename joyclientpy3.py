@@ -4,7 +4,7 @@ import pygame
 from pygame.locals import *
 import time
 import os
-cclear = "\n" * 1000
+clear = lambda : os.system('tput reset')
 #Netcode?
 import socket               # Import socket module
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         # Create a socket object
