@@ -5,6 +5,7 @@ import pickle
 import Adafruit_I2C
 import Adafruit_PWM_Servo_Driver
 from Adafruit_PWM_Servo_Driver import PWM
+clear = lambda : os.system('tput reset')
 
 # Initialize the Servo Controller
 pwm = PWM(0x40)
@@ -44,11 +45,13 @@ print ("Port assigned")
 print(port)
 print ("")
 print ("Opening Socket to listen")
+time.sleep(2)
 s.listen(5)# Now wait for client connection.
 c, addr = s.accept()     # Establish connection with client. 
 cm = 'Connected to RasPi Bot'
 c.send(cm.encode('ascii')) 
 print ('Controller connected from', addr)
+time.sleep(2)
 x = 1
 campan = 0
 camtilt = 0
@@ -70,7 +73,10 @@ while x > 0:
     frameref = "ack"
     printref = str(frameref)
     c.send(printref.encode('ascii'))
-    print("Rx!")
+    clear()
+    print " "
+    print ("Receiving Controller Data")
+    print " "
     roundone = float("{:.1f}".format(joyaxetwo))
     roundtwo = float("{:.1f}".format(joyaxeone))
     roundthree = float("{:.1f}".format(joyaxefour))
