@@ -26,17 +26,17 @@ s.listen(5)# Now wait for client connection.
 c, addr = s.accept()     # Establish connection with client. 
 cm = 'Connected to RasPi Bot'
 c.send(cm.encode('ascii')) 
-while True:
-   #print ('Got connection from', addr)              
+print ('Controller connected from', addr) 
+while True:             
    joydata = c.recv(2048)#.decode()
    joyd = pickle.loads(joydata)
    #pprint.pprint(joyd)
-   print(joyd[1])
-   print(joyd[2])
-   #rxmess = (joydata.encode('ascii'))
+   joyaxeone = (joyd[1])
+   joyaxetwo = (joyd[2])
+   joyaxethree = (joyd[3])
+   joyaxefour = (joyd[4])
    frameref = 0
    frameref = (frameref + 1)
    printref = str(frameref)
    c.send(printref.encode('ascii'))
    #c.close()                # Close the connection
-   #some changes to commit

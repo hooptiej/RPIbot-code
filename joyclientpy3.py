@@ -68,7 +68,7 @@ else:
             #print (joyaxethree)
             #print (joyaxefour)
             #s.connect((remhost, port))
-            joydata = [{1:joyaxeone,2:joyaxetwo,3:joyaxethree,4:joyaxefour}]
+            joydata = {1:joyaxeone,2:joyaxetwo,3:joyaxethree,4:joyaxefour}
             joyd = pickle.dumps(joydata)
             #pprint.pprint(joyd)
             #print (joyd)
