@@ -3,6 +3,7 @@
 import time
 import os
 import pickle
+import pprint
 
 #Netcode?
 import socket               # Import socket module
@@ -29,7 +30,7 @@ while True:
    #print ('Got connection from', addr)              
    joydata = c.recv(1024)#.decode()
    joyd = pickle.loads(joydata)
-   print (joydata)
+   pprint.pprint(joyd)
    #rxmess = (joydata.encode('ascii'))
    #c.send(joydata.encode('ascii'))
    #c.close()                # Close the connection
