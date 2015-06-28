@@ -75,7 +75,7 @@ while x > 0:
     roundtwo = float("{:.1f}".format(joyaxeone))
     roundthree = float("{:.1f}".format(joyaxethree))
     roundfour = float("{:.1f}".format(joyaxefour))
-    print roundone
+    print ("steering Position", roundone)
     print roundtwo
     print roundthree
     print roundfour
