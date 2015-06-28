@@ -101,9 +101,9 @@ while x > 0:
         throt = 500
     elif roundthree == 0:
         throt = 390
-    if roundfour > 0:
+    if roundfour > 0.3:
         steer = steer + 8
-    elif roundfour < 0:
+    elif roundfour < (0 - 0.3):
         steer = steer - 8    
     if camtilt >= servoMax:
         camtilt = servoMax
