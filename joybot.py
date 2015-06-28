@@ -31,6 +31,6 @@ while True:
    joyd = pickle.loads(joydata)
    print (joydata)
    #rxmess = (joydata.encode('ascii'))
-   c.send(joydata.encode('ascii'))
+   #c.send(joydata.encode('ascii'))
    #c.close()                # Close the connection
    #some changes to commit
