@@ -32,6 +32,7 @@ while True:
    joyd = pickle.loads(joydata)
    #pprint.pprint(joyd)
    print(joyd[1])
+   print(joyd[2])
    #rxmess = (joydata.encode('ascii'))
    frameref = 0
    frameref = (frameref + 1)
