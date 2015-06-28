@@ -70,7 +70,11 @@ while x > 0:
     printref = str(frameref)
     c.send(printref.encode('ascii'))
     print("Rx!")
-    print joyaxeone
+    roundone = ("{:+.2f}".format(joyaxeone))
+    #roundtwo
+    #roundthree
+    #roundfour
+    print roundone
     print joyaxetwo
     print joyaxethree
     print joyaxefour
