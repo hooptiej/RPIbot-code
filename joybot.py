@@ -23,7 +23,8 @@ print ("")
 print ("Opening Socket to listen")
 s.listen(5)# Now wait for client connection.
 c, addr = s.accept()     # Establish connection with client. 
-c.send('Connected to RasPi Bot') 
+cm = 'Connected to RasPi Bot'
+c.send(cm.encode('ascii')) 
 while True:
    #print ('Got connection from', addr)              
    joydata = c.recv(1024)#.decode()
