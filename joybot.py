@@ -34,6 +34,7 @@ while True:
    #rxmess = (joydata.encode('ascii'))
    frameref = 0
    frameref = (frameref + 1)
-   c.send(frameref.encode('ascii'))
+   printref = str(frameref)
+   c.send(printref.encode('ascii'))
    #c.close()                # Close the connection
    #some changes to commit
