@@ -37,4 +37,5 @@ while True:
    frameref = (frameref + 1)
    printref = str(frameref)
    c.send(printref.encode('ascii'))
+   print("Rx!")
    #c.close()                # Close the connection
