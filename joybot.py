@@ -59,7 +59,7 @@ campan = servoCenter
 camtilt = servoCenter
 throt = 0
 steer = 0
-throt = 375
+throt = 385
 steer = servoCenter
 
 
@@ -100,7 +100,7 @@ while x > 0:
     elif roundthree < (0 - 0.5):
         throt = throt - 1
     elif roundthree == 0:
-        throt = 375
+        throt = 385
     if roundfour > 0:
         steer = steer + 8
     elif roundfour < 0:
