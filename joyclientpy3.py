@@ -57,14 +57,14 @@ else:
     while joymotion > 0:
         for event in pygame.event.get():
             if event.type == pygame.JOYAXISMOTION:
-                joyaxeone = pygame.joystick.Joystick(0).get_axis(0)
-                joyaxetwo = pygame.joystick.Joystick(0).get_axis(1)
-                joyaxethree = pygame.joystick.Joystick(0).get_axis(2)
-                joyaxefour = pygame.joystick.Joystick(0).get_axis(3)
+                joyaxeone = str(pygame.joystick.Joystick(0).get_axis(0))
+                joyaxetwo = str(pygame.joystick.Joystick(0).get_axis(1))
+                joyaxethree = str(pygame.joystick.Joystick(0).get_axis(2))
+                joyaxefour = str(pygame.joystick.Joystick(0).get_axis(3))
             #print (joyaxeone)
             #print (joyaxetwo)
             #print (joyaxethree)
             #print (joyaxefour)
-            s.connect((remhost, port))
-            s.send(joyaxeone)
+            #s.connect((remhost, port))
+            s.send(joyaxeone.encode('ascii'))
             print (s.recv(1024))
