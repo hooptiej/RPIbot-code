@@ -74,8 +74,8 @@ while x > 0:
     roundtwo = ("{:+.1f}".format(joyaxetwo))
     roundthree = ("{:+.1f}".format(joyaxethree))
     roundfour = ("{:+.1f}".format(joyaxefour))
-    print roundone
-    print roundtwo
+    print int(roundone)
+    print int(roundtwo)
     print roundthree
     print roundfour
     #Servo Positioning 
