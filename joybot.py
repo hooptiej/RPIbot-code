@@ -75,13 +75,13 @@ while x > 0:
     print joyaxethree
     print joyaxefour
     #Servo Positioning 
-    if joyaxeone < 0:
+    if joyaxeone = (-1):
         camtilt = camtilt + 1
-    elif joyaxeone > 0:
+    elif joyaxeone = (1):
         camtilt = camtilt - 1
-    if joyaxetwo  < 0:
+    if joyaxetwo  = (-1):
         campan = campan - 1
-    elif joyaxetwo > 0:
+    elif joyaxetwo =(1):
         campan = campan + 1
     if joyaxethree > 0:
         throt = throt + 1
@@ -96,6 +96,6 @@ while x > 0:
     pwm.setPWM(0, 0, throt)
     pwm.setPWM(1, 0, steer)
     print "servo pos set?"
-    print campan
     print camtilt
+    print campan
     #c.close()                # Close the connection
