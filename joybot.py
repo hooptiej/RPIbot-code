@@ -71,7 +71,7 @@ while x > 0:
     printref = str(frameref)
     c.send(printref.encode('ascii'))
     print("Rx!")
-    roundone = ("{:.1f}".format(joyaxeone))
+    roundone = float("{:.1f}".format(joyaxeone))
     roundtwo = ("{:.1f}".format(joyaxetwo))
     roundthree = ("{:.1f}".format(joyaxethree))
     roundfour = ("{:.1f}".format(joyaxefour))
