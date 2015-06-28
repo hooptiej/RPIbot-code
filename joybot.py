@@ -75,13 +75,13 @@ while x > 0:
     print joyaxethree
     print joyaxefour
     #Servo Positioning 
-    if joyaxeone = (-1):
+    if joyaxeone = -1:
         camtilt = camtilt + 1
-    elif joyaxeone = (1):
+    elif joyaxeone = 1:
         camtilt = camtilt - 1
-    if joyaxetwo  = (-1):
+    if joyaxetwo  = -1:
         campan = campan - 1
-    elif joyaxetwo =(1):
+    elif joyaxetwo =1:
         campan = campan + 1
     if joyaxethree > 0:
         throt = throt + 1
