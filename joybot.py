@@ -90,7 +90,15 @@ while x > 0:
     if joyaxefour > 0:
         steer = steer + 1
     elif joyaxefour < 0:
-        steer = steer - 1
+        steer = steer - 1    
+    if camtilt >= servoMax:
+        camtilt = servoMax
+    if camtilt <= servomin:
+        camtilt = servomin
+    if campan >= servoMax:
+        campan = servoMax
+    if campan <= servoMin:
+        campan = servomin
     pwm.setPWM(14, 0, camtilt)
     pwm.setPWM(15, 0, campan)
     pwm.setPWM(0, 0, throt)
