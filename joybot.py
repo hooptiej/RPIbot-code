@@ -49,6 +49,16 @@ cm = 'Connected to RasPi Bot'
 c.send(cm.encode('ascii')) 
 print ('Controller connected from', addr)
 x = 1
+campan = 0
+camtilt = 0
+campan = servoCenter
+camtilt = servoCenter
+throt = 0
+steer = 0
+throt = servoCenter
+steer = servoCenter
+
+
 while x > 0:             
     joydata = c.recv(2048)#.decode()
     joyd = pickle.loads(joydata)
@@ -65,14 +75,6 @@ while x > 0:
     print joyaxethree
     print joyaxefour
     #Servo Positioning 
-    campan = 0
-    camtilt = 0
-    campan = servoCenter
-    camtilt = servoCenter
-    throt = 0
-    steer = 0
-    throt = servoCenter
-    steer = servoCenter
     if joyaxeone  > 0:
         camtilt = camtilt + 1
     elif joyaxeone < 0:
