@@ -49,16 +49,31 @@ cm = 'Connected to RasPi Bot'
 c.send(cm.encode('ascii')) 
 print ('Controller connected from', addr) 
 while True:             
-   joydata = c.recv(2048)#.decode()
-   joyd = pickle.loads(joydata)
-   #pprint.pprint(joyd)
-   joyaxeone = (joyd[1])
-   joyaxetwo = (joyd[2])
-   joyaxethree = (joyd[3])
-   joyaxefour = (joyd[4])
-   frameref = 0
-   frameref = (frameref + 1)
-   printref = str(frameref)
-   c.send(printref.encode('ascii'))
-   print("Rx!")
-   #c.close()                # Close the connection
+    joydata = c.recv(2048)#.decode()
+    joyd = pickle.loads(joydata)
+    joyaxeone = (joyd[1]) #camera tilt left stick
+    joyaxetwo = (joyd[2]) #cam tilt left stick 
+    joyaxethree = (joyd[3]) #throttle - right stick
+    joyaxefour = (joyd[4]) #steering servo - right stick
+    frameref = "ack"
+    printref = str(frameref)
+    c.send(printref.encode('ascii'))
+    print("Rx!")
+    #Servo Positioning 
+    campan = 0
+    camtilt = 0
+    campan = servoCenter
+    camtilt = servoCenter
+    if joyaxeone  > 0:
+        camtilt = camtilt + 1
+    elif joyaxeone < 0:
+        camtilt = camtilt - 1 
+    else
+    if joyaxetwo  > 0:
+        campan = campan + 1
+    elif joyaxerwo < 0:
+        campan = campan - 1 
+    else
+    pwm.setPWM(14, 0, camtilt)
+    pwm.setPWM(15, 0, campan)
+    #c.close()                # Close the connection
