@@ -27,7 +27,7 @@ while True:
    c.send('Thank you for connecting')
    joydata = c.recv(1024).decode()
    print (joydata)
-   rxmess = (joydata.encode('ascii'))
-   c.send('received joydata', rxmess)
+   #rxmess = (joydata.encode('ascii'))
+   c.send(joydata.encode('ascii'))
    #c.close()                # Close the connection
    #some changes to commit
