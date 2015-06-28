@@ -25,7 +25,7 @@ while True:
    #print ('Got connection from', addr)
    c, addr = s.accept()     # Establish connection with client.                
    c.send('Thank you for connecting')
-   data = s.recv(1024).decode()
+   data = c.recv(1024).decode()
    print (data)
    #c.close()                # Close the connection
    #some changes to commit
