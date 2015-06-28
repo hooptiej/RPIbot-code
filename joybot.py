@@ -1,6 +1,6 @@
 import time
 import os
-import decimal
+#import decimal
 import pickle
 import Adafruit_I2C
 import Adafruit_PWM_Servo_Driver
@@ -76,16 +76,16 @@ while x > 0:
     clear()
     print " "
     print ("Receiving Controller Data")
-    print " "
+    #print " "
     roundone = float("{:.1f}".format(joyaxetwo))
     roundtwo = float("{:.1f}".format(joyaxeone))
     roundthree = float("{:.1f}".format(joyaxefour))
     roundfour = float("{:.1f}".format(joyaxethree))
-    print "Joystick input"
-    print roundone
-    print roundtwo
-    print roundthree
-    print roundfour
+    #print "Joystick input"
+    #print roundone
+    #print roundtwo
+    #print roundthree
+    #print roundfour
     #Servo Positioning 
     if roundone > 0:
         camtilt = camtilt - 4
