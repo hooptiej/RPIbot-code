@@ -73,8 +73,8 @@ while x > 0:
     print("Rx!")
     roundone = float("{:.1f}".format(joyaxetwo))
     roundtwo = float("{:.1f}".format(joyaxeone))
-    roundthree = float("{:.1f}".format(joyaxethree))
-    roundfour = float("{:.1f}".format(joyaxefour))
+    roundthree = float("{:.1f}".format(joyaxefour))
+    roundfour = float("{:.1f}".format(joyaxethree))
     print roundone
     print roundtwo
     print roundthree
@@ -93,9 +93,9 @@ while x > 0:
     elif roundthree < 0:
         throt = throt - 5
     if roundfour > 0:
-        steer = steer + 1
+        steer = steer + 5
     elif roundfour < 0:
-        steer = steer - 1    
+        steer = steer - 5    
     if camtilt >= servoMax:
         camtilt = servoMax
     if camtilt <= servoMin:
