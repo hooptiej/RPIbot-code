@@ -1,5 +1,3 @@
-#import pygame
-#from pygame.locals import *
 import time
 import os
 import pickle
