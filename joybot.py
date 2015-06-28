@@ -28,7 +28,7 @@ cm = 'Connected to RasPi Bot'
 c.send(cm.encode('ascii')) 
 while True:
    #print ('Got connection from', addr)              
-   joydata = c.recv(1024)#.decode()
+   joydata = c.recv(2048)#.decode()
    joyd = pickle.loads(joydata)
    pprint.pprint(joyd)
    #rxmess = (joydata.encode('ascii'))
