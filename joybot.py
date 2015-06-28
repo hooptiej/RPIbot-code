@@ -81,17 +81,17 @@ while x > 0:
     print roundfour
     #Servo Positioning 
     if roundone > 0:
-        camtilt = camtilt - 5
+        camtilt = camtilt - 3
     elif roundone < 0:
-        camtilt = camtilt + 5
+        camtilt = camtilt + 3
     if roundtwo > 0:
-        campan = campan - 5
+        campan = campan - 3
     elif roundtwo < 0:
-        campan = campan + 5
+        campan = campan + 3
     if roundthree > 0:
-        throt = throt + 5
+        throt = throt + 2
     elif roundthree < 0:
-        throt = throt - 5
+        throt = throt - 2
     if roundfour > 0:
         steer = steer + 5
     elif roundfour < 0:
