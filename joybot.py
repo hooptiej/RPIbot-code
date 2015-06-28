@@ -2,6 +2,7 @@
 #from pygame.locals import *
 import time
 import os
+import pickle
 
 #Netcode?
 import socket               # Import socket module
@@ -21,11 +22,12 @@ print(port)
 print ("")
 print ("Opening Socket to listen")
 s.listen(5)# Now wait for client connection.
-c, addr = s.accept()     # Establish connection with client.  
+c, addr = s.accept()     # Establish connection with client. 
+c.send('Connected to RasPi Bot') 
 while True:
    #print ('Got connection from', addr)              
-   c.send('Thank you for connecting')
    joydata = c.recv(1024).decode()
+   joyd = pickle.loads(joydata)
    print (joydata)
    #rxmess = (joydata.encode('ascii'))
    c.send(joydata.encode('ascii'))

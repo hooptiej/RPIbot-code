@@ -1,3 +1,4 @@
+import pickle
 import pygame
 from pygame.locals import *
 import time
@@ -51,7 +52,7 @@ else:
     print (" ")
     print ("Joypad Ready")
     print (" ")
-    time.sleep(5)
+    #time.sleep(5)
     pygame.init()
     joymotion = 1
     while joymotion > 0:
@@ -62,9 +63,12 @@ else:
                 joyaxethree = str(pygame.joystick.Joystick(0).get_axis(2))
                 joyaxefour = str(pygame.joystick.Joystick(0).get_axis(3))
             print (joyaxeone)
-            #print (joyaxetwo)
-            #print (joyaxethree)
-            #print (joyaxefour)
+            print (joyaxetwo)
+            print (joyaxethree)
+            print (joyaxefour)
             #s.connect((remhost, port))
-            s.send(joyaxeone.encode('ascii'))
-            print (s.recv(1024))
+            joydata = [{1:joyaxeone,2:joyaxetwo,3:joyaxethree,4:joyaxefour}]
+            joyd = pickle.dumps(joydata)
+            #print (joyd)
+            s.send(joyd)
+            #print (s.recv(1024))
