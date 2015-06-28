@@ -73,4 +73,5 @@ else:
             pprint.pprint(joyd)
             #print (joyd)
             s.send(joyd)
-            #print (s.recv(1024))
+            frameref = (s.recv(1024))
+            print (frameref)

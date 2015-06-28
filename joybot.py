@@ -32,6 +32,8 @@ while True:
    joyd = pickle.loads(joydata)
    pprint.pprint(joyd)
    #rxmess = (joydata.encode('ascii'))
-   #c.send(joydata.encode('ascii'))
+   frameref = 0
+   frameref = (frameref + 1)
+   c.send(frameref.encode('ascii'))
    #c.close()                # Close the connection
    #some changes to commit
