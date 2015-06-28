@@ -71,29 +71,29 @@ while x > 0:
     c.send(printref.encode('ascii'))
     print("Rx!")
     roundone = ("{:+.2f}".format(joyaxeone))
-    #roundtwo
-    #roundthree
-    #roundfour
+    roundtwo = ("{:+.2f}".format(joyaxetwo))
+    roundthree = ("{:+.2f}".format(joyaxethree))
+    roundfour = ("{:+.2f}".format(joyaxefour))
     print roundone
-    print joyaxetwo
-    print joyaxethree
-    print joyaxefour
+    print roundtwo
+    print roundthree
+    print roundfour
     #Servo Positioning 
-    if joyaxeone > 0:
+    if roundone > 0:
         camtilt = camtilt + 1
-    elif joyaxeone < 0:
+    elif roundone < 0:
         camtilt = camtilt - 1
-    if joyaxetwo  > 0:
+    if roundtwo > 0:
         campan = campan + 1
-    elif joyaxetwo < 0:
+    elif roundtwo < 0:
         campan = campan - 1
-    if joyaxethree > 0:
+    if roundthree > 0:
         throt = throt + 1
-    elif joyaxethree < 0:
+    elif roundthree < 0:
         throt = throt - 1
-    if joyaxefour > 0:
+    if roundfour > 0:
         steer = steer + 1
-    elif joyaxefour < 0:
+    elif roundfour < 0:
         steer = steer - 1    
     if camtilt >= servoMax:
         camtilt = servoMax
