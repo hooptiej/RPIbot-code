@@ -81,27 +81,28 @@ while x > 0:
     roundtwo = float("{:.1f}".format(joyaxeone))
     roundthree = float("{:.1f}".format(joyaxefour))
     roundfour = float("{:.1f}".format(joyaxethree))
+    print "Joystick input"
     print roundone
     print roundtwo
     print roundthree
     print roundfour
     #Servo Positioning 
     if roundone > 0:
-        camtilt = camtilt - 3
+        camtilt = camtilt - 4
     elif roundone < 0:
-        camtilt = camtilt + 3
+        camtilt = camtilt + 4
     if roundtwo > 0:
-        campan = campan - 3
+        campan = campan - 4
     elif roundtwo < 0:
-        campan = campan + 3
+        campan = campan + 4
     if roundthree > 0:
         throt = throt + 2
     elif roundthree < 0:
         throt = throt - 2
     if roundfour > 0:
-        steer = steer + 5
+        steer = steer + 6
     elif roundfour < 0:
-        steer = steer - 5    
+        steer = steer - 6    
     if camtilt >= servoMax:
         camtilt = servoMax
     if camtilt <= servoMin:
@@ -122,7 +123,7 @@ while x > 0:
     pwm.setPWM(14, 0, campan)
     pwm.setPWM(0, 0, throt)
     pwm.setPWM(1, 0, steer)
-    print "servo pos set?"
+    print " "
     print ("Camera Tilt Servo Position", camtilt)
     print ("Camera Pan Servo Position", campan)
     print ("Steering Servo Position", steer)
