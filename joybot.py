@@ -1,5 +1,6 @@
 import time
 import os
+import decimal
 import pickle
 import Adafruit_I2C
 import Adafruit_PWM_Servo_Driver
@@ -74,8 +75,8 @@ while x > 0:
     roundtwo = ("{:.1f}".format(joyaxetwo))
     roundthree = ("{:.1f}".format(joyaxethree))
     roundfour = ("{:.1f}".format(joyaxefour))
-    print int(roundone)
-    print int(roundtwo)
+    print roundone
+    print roundtwo
     print roundthree
     print roundfour
     #Servo Positioning 
