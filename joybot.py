@@ -96,15 +96,15 @@ while x > 0:
     elif roundtwo < 0:
         campan = campan + 5
     if roundthree > 0.5:
-        throt = 290
+        throt = 280
     elif roundthree < (0 - 0.5):
-        throt = 410
+        throt = 425
     elif roundthree == 0:
         throt = 390
     if roundfour > 0.3:
-        steer = steer + 8
+        steer = steer + 10
     elif roundfour < (0 - 0.3):
-        steer = steer - 8    
+        steer = steer - 10   
     if camtilt >= servoMax:
         camtilt = servoMax
     if camtilt <= servoMin:
