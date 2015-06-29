@@ -98,7 +98,7 @@ while x > 0:
     if roundthree > 0.5:
         throt = 290
     elif roundthree < (0 - 0.5):
-        throt = 500
+        throt = 410
     elif roundthree == 0:
         throt = 390
     if roundfour > 0.3:
