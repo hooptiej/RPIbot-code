@@ -17,9 +17,9 @@ pwm = PWM(0x40)
 # Note if you'd like more debug output you can instead run:
 #pwm = PWM(0x40, debug=True)
 
-servoMin = 80  # Min pulse length out of 4096
+servoMin = 210  # Min pulse length out of 4096
 servoCenter = 330 # math center
-servoMax = 550  # Max pulse length out of 4096
+servoMax = 450  # Max pulse length out of 4096
 
 
 servoPos = servoCenter
