@@ -182,7 +182,6 @@ while loop == 1:
                                         servoposY = servoMin
                                 pwm.setPWM(servochannelx, 0, servoposX)
 				pwm.setPWM(servochannely, 0, servoposY)
-                pwm.setPWM(servochannelx, 0, servoposX)
 				#time.sleep(.1)
 				clock.tick(15)			
 				#clear()
