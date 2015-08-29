@@ -161,27 +161,34 @@ while loop == 1:
 					
 				if joyposone > 0:
 					servoposX = servoposX - 3
+                    servoposY = servoposY - 3
 				elif joyposone < 0:
+                    servoposY = servoposY + 3
 					servoposX = servoposX + 3
 				print " "
 				if servoposX >= servoMax:
 					servoposX = servoMax
 				if servoposX <= servoMin:
 					servoposX = servoMin
+                if servoposY >= servoMax:
+                    servoposY = servoMax
+                if servoposY <= servoMin:
+                    servoposY = servoMin
                                 #if joypostwo == 0:
                                 #        servoposY = servoCenter
 
-                                if joypostwo > 0:
-                                        servoposY = servoposY + 3
-                                elif joypostwo < 0:
-                                        servoposY = servoposY - 3
-                                print " "
-                                if servoposX >= servoMax:
-                                        servoposY = servoMax
-                                if servoposX <= servoMin:
-                                        servoposY = servoMin
-                                pwm.setPWM(servochannelx, 0, servoposX)
+                                #if joypostwo > 0:
+                                #        servoposY = servoposY + 3
+                                #elif joypostwo < 0:
+                                #        servoposY = servoposY - 3
+                                #print " "
+                                #if servoposX >= servoMax:
+                                #        servoposY = servoMax
+                                #if servoposX <= servoMin:
+                                #        servoposY = servoMin
+                                #pwm.setPWM(servochannelx, 0, servoposX)
 				pwm.setPWM(servochannely, 0, servoposY)
+                pwm.setPWM(servochannelx, 0, servoposX)
 				#time.sleep(.1)
 				clock.tick(15)			
 				#clear()
