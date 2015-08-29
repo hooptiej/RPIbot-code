@@ -162,7 +162,7 @@ while loop == 1:
 				if joyposone > 0:
 					servoposX = servoposX - 3
                     servoposY = servoposY - 3
-				elif joyposone < 0:
+                elif joyposone < 0:
                     servoposY = servoposY + 3
 					servoposX = servoposX + 3
 				print " "
