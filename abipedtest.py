@@ -115,6 +115,7 @@ else:
             if event.type == pygame.JOYHATMOTION:
                 print("D-Pad Moving.")
                 joyhat = str(pygame.joystick.Joystick(0).get_hat(0))
+                print (joyhat)
                 if joyhat == 1:
                     lanklepos = lanklepos + 3
                     ranklepos = ranklepos - 3
