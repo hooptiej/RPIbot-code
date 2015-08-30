@@ -13,9 +13,30 @@ pwm = PWM(0x40)
 # Note if you'd like more debug output you can instead run:
 #pwm = PWM(0x40, debug=True)
 
+lankle = 15
+rankle = 0
+
+lfoot = 13
+rfoot = 2
+
+lhip = 11
+rhip = 4
+
+rwaist = 9
+lwaist = 6
+
 servoMin = 210  # Min pulse length out of 4096
 servoCenter = 330 # math center
 servoMax = 450  # Max pulse length out of 4096
+
+ranklepos = servoCenter
+lanklepos = servoCenter
+rfootpos = servoCenter
+lfootpos = servoCenter
+rwaistpos = servoCenter
+lwaistpos = servoCenter
+rhippos = servoCenter
+lhippos = servoCenter
 
 def setServoPulse(channel, pulse):
     pulseLength = 1000000                   # 1,000,000 us per second
@@ -94,4 +115,11 @@ else:
             if event.type == pygame.JOYHATMOTION:
                 print("D-Pad Moving.")
                 joyhat = str(pygame.joystick.Joystick(0).get_hat(0))
-            time.sleep(0.1)
+                if joyhat = 1:
+                    lanklepos = lanklepos + 3
+                    ranklepos = ranklepos - 3
+                elif joyhat = 4
+                    lanklepos = lanklepos - 3
+                    ranklepos = ranklepos + 3
+                pwm.setPWM(lankle, 0, lanklepos)
+                pwm.setPWM(rankle, 0, ranklepos)
