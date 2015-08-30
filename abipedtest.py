@@ -153,6 +153,10 @@ else:
                 #pwm.setPWM(rwaist, 0, rwaistpos)
                 pwm.setPWM(lfoot, 0, lfootpos)
                 pwm.setPWM(rfoot, 0, rfootpos)
+                print "Left foot position"
+                print(lfootpos)
+                print "Right foot pos"
+                print(rfootpos)
                 print (lanklepos)
                 print (ranklepos)
                 print (lhippos)
