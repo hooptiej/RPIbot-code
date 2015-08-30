@@ -63,7 +63,7 @@ else:
     time.sleep(2)
     loop = 1
     while loop > 0:
-        #clear()
+        clear()
         for event in pygame.event.get(): # User did something
             if event.type == pygame.JOYBUTTONDOWN:
                 print("Joystick button pressed.")
@@ -83,11 +83,15 @@ else:
                 print("Joystick button released.")
             if event.type == pygame.JOYAXISMOTION:
                 joyaxeone = str(pygame.joystick.Joystick(0).get_axis(0))
-                print (joyaxeone)
                 joyaxetwo = str(pygame.joystick.Joystick(0).get_axis(1))
                 joyaxethree = str(pygame.joystick.Joystick(0).get_axis(2))
                 joyaxefour = str(pygame.joystick.Joystick(0).get_axis(3))
                 print("Stick moving.")
+                print (joyaxeone)
+                print (joyaxetwo)
+                print (joyaxethree)
+                print (joyaxefour)
             if event.type == pygame.JOYHATMOTION:
                 print("D-Pad Moving.")
-                hat = str(pygame.joystick.Joystick(0).get_hat(0))
+                joyhat = str(pygame.joystick.Joystick(0).get_hat(0))
+            time.sleep(0.1)
