@@ -38,17 +38,6 @@ lwaistpos = servoCenter
 rhippos = servoCenter
 lhippos = servoCenter
 
-print "Centering Servos"
-
-pwm.setPWM(lwaist, 0, lwaistpos)
-pwm.setPWM(rwaist, 0, rwaistpos)
-pwm.setPWM(lfoot, 0, lfootpos)
-pwm.setPWM(rfoot, 0, rfootpos)
-pwm.setPWM(lankle, 0, lanklepos)
-pwm.setPWM(rankle, 0, ranklepos)
-pwm.setPWM(lhip, 0, lhippos)
-pwm.setPWM(rhip, 0, rhippos)
-
 
 def setServoPulse(channel, pulse):
     pulseLength = 1000000                   # 1,000,000 us per second
@@ -64,6 +53,18 @@ pwm.setPWMFreq(60)                        # Set frequency to 60 Hz
 print " "
 print "Biped Test Control center V.a"
 print " "
+print "Centering Servos"
+
+pwm.setPWM(lwaist, 0, lwaistpos)
+pwm.setPWM(rwaist, 0, rwaistpos)
+pwm.setPWM(lfoot, 0, lfootpos)
+pwm.setPWM(rfoot, 0, rfootpos)
+pwm.setPWM(lankle, 0, lanklepos)
+pwm.setPWM(rankle, 0, ranklepos)
+pwm.setPWM(lhip, 0, lhippos)
+pwm.setPWM(rhip, 0, rhippos)
+
+
 time.sleep(1)
 #clear()
 print " "
