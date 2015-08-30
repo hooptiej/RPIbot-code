@@ -70,9 +70,9 @@ else:
         clear()
         for event in pygame.event.get(): # User did something
             if event.type == pygame.JOYBUTTONDOWN:
-                    print("Joystick button pressed.")
-                if event.type == pygame.JOYBUTTONUP:
-                    print("Joystick button released.")
+                print("Joystick button pressed.")
+                    if event.type == pygame.JOYBUTTONUP:
+                        print("Joystick button released.")
             if event.type == pygame.JOYAXISMOTION:
                     print("Stick moving.")
             if event.type == pygame.JOYHATMOTION:
