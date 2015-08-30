@@ -35,13 +35,13 @@ print " "
 print "Centering All Servos"
 print " "
 time.sleep(2)
-
+  
   # set all servos to center to start
 choice = 0
 loop = 1
-choicetwo = 0 
+choicetwo = 0
 choicejoytest = 0
-while loop == 1:  
+while loop == 1:
 #print what options you have
     clear()
     print "Welcome to Biped test"
@@ -146,7 +146,7 @@ while loop == 1:
 	    servoposY = 0
 	    servoposX = servoCenter
 	    servoposY = servoCenter
-
+	    
 	    while hattest > 0:
 	  	  for event in pygame.event.get():
 			if event.type == pygame.JOYAXISMOTION:
@@ -154,11 +154,11 @@ while loop == 1:
 				print("Monitoring X-Y on Main Stick")
 	 			print " "
 	    			joyposone = pygame.joystick.Joystick(0).get_axis(0)
-
+				
 				joypostwo = pygame.joystick.Joystick(0).get_axis(1)
 				#if joyposone == 0:
 				#	servoposX = servoCenter
-					
+				
 				if joyposone > 0:
                     servoposX = servoposX + 3
                     servoposY = servoposY - 3
@@ -176,7 +176,7 @@ while loop == 1:
                     servoposY = servoMin
                                 #if joypostwo == 0:
                                 #        servoposY = servoCenter
-
+                                
                                 #if joypostwo > 0:
                                 #        servoposY = servoposY + 3
                                 #elif joypostwo < 0:
@@ -190,10 +190,10 @@ while loop == 1:
 				pwm.setPWM(servochannely, 0, servoposY)
                 pwm.setPWM(servochannelx, 0, servoposX)
 				#time.sleep(.1)
-				clock.tick(15)			
+				clock.tick(15)
 				#clear()
 
-
+	    
 	    time.sleep(3)
     elif choice == 5:
                 loop = 0
