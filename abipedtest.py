@@ -55,8 +55,8 @@ print "Biped Test Control center V.a"
 print " "
 print "Centering Servos"
 
-#pwm.setPWM(lwaist, 0, lwaistpos)
-#pwm.setPWM(rwaist, 0, rwaistpos)
+pwm.setPWM(lwaist, 0, lwaistpos)
+pwm.setPWM(rwaist, 0, rwaistpos)
 pwm.setPWM(lfoot, 0, lfootpos)
 pwm.setPWM(rfoot, 0, rfootpos)
 pwm.setPWM(lankle, 0, lanklepos)
@@ -139,20 +139,20 @@ else:
                     ranklepos = ranklepos + 3
                     lhippos = lhippos - 3
                     rhippos = rhippos + 3
-                #if joyhat[0] == (1):
-                    #lwaistpos = lwaistpos + 3
-                    #rwaistpos = rwaistpos - 3
-                    #lfootpos = lfootpos + 3
-                    #rfootpos = rfootpos - 3
-                #elif joyhat[0] == (-1):
-                    #lwaistpos = lwaistpos - 3
-                    #rwaistpos = rwaistpos + 3
-                    #lfootpos = lfootpos - 3
-                    #rfootpos = rfootpos + 3
-                #pwm.setPWM(lwaist, 0, lwaistpos)
-                #pwm.setPWM(rwaist, 0, rwaistpos)
-                #pwm.setPWM(lfoot, 0, lfootpos)
-                #pwm.setPWM(rfoot, 0, rfootpos)
+                elif joyhat[0] == (1):
+                    lwaistpos = lwaistpos + 3
+                    rwaistpos = rwaistpos - 3
+                    lfootpos = lfootpos + 3
+                    rfootpos = rfootpos - 3
+                elif joyhat[0] == (-1):
+                    lwaistpos = lwaistpos - 3
+                    rwaistpos = rwaistpos + 3
+                    lfootpos = lfootpos - 3
+                    rfootpos = rfootpos + 3
+                pwm.setPWM(lwaist, 0, lwaistpos)
+                pwm.setPWM(rwaist, 0, rwaistpos)
+                pwm.setPWM(lfoot, 0, lfootpos)
+                pwm.setPWM(rfoot, 0, rfootpos)
                 print (lanklepos)
                 print (ranklepos)
                 print (lhippos)
