@@ -8,10 +8,6 @@ import pygame
 from pygame.locals import *
 clock = pygame.time.Clock()
 clear()
-# ===========================================================================
-# Example Code
-# ===========================================================================
-
 # Initialise the PWM device using the default address
 pwm = PWM(0x40)
 # Note if you'd like more debug output you can instead run:
@@ -67,7 +63,7 @@ else:
     time.sleep(2)
     loop = 1
     while loop > 0:
-        clear()
+        #clear()
         for event in pygame.event.get(): # User did something
             if event.type == pygame.JOYBUTTONDOWN:
                 print("Joystick button pressed.")
