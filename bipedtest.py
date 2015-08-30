@@ -160,11 +160,11 @@ while loop == 1:
 				#	servoposX = servoCenter
 					
 				if joyposone > 0:
-                    servoposX = servoposX - 3
+                    servoposX = servoposX + 3
                     servoposY = servoposY - 3
                 elif joyposone < 0:
                     servoposY = servoposY + 3
-					servoposX = servoposX + 3
+					servoposX = servoposX - 3
 				print " "
 				if servoposX >= servoMax:
 					servoposX = servoMax
