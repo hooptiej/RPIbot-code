@@ -118,7 +118,7 @@ else:
                 if joyhat == 1:
                     lanklepos = lanklepos + 3
                     ranklepos = ranklepos - 3
-                elif joyhat == 4
+                elif joyhat == 4:
                     lanklepos = lanklepos - 3
                     ranklepos = ranklepos + 3
                 pwm.setPWM(lankle, 0, lanklepos)
