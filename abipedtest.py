@@ -165,4 +165,6 @@ else:
                 pwm.setPWM(rankle, 0, ranklepos)
                 pwm.setPWM(lhip, 0, lhippos)
                 pwm.setPWM(rhip, 0, rhippos)
-            #clock.tick(15)
+                pygame.time.wait(15)
+            pygame.event.pump()
+            clock.tick(20)
