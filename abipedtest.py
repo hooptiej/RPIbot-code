@@ -75,7 +75,7 @@ else:
                     print("Joystick button released.")
             if event.type == pygame.JOYAXISMOTION:
                 joyaxeone = str(pygame.joystick.Joystick(0).get_axis(0))
-                print (joyaxwone)
+                print (joyaxeone)
                 joyaxetwo = str(pygame.joystick.Joystick(0).get_axis(1))
                 joyaxethree = str(pygame.joystick.Joystick(0).get_axis(2))
                 joyaxefour = str(pygame.joystick.Joystick(0).get_axis(3))
