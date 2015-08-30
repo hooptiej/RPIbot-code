@@ -49,7 +49,7 @@ else:
     print " "
     print "Joystick detected"
     time.sleep(1)
-    clear()
+    #clear()
     print " "
     print stickname + " was Detected"
     pygame.joystick.Joystick(0).init()
@@ -74,6 +74,11 @@ else:
                 if event.type == pygame.JOYBUTTONUP:
                     print("Joystick button released.")
             if event.type == pygame.JOYAXISMOTION:
-                    print("Stick moving.")
+                joyaxeone = str(pygame.joystick.Joystick(0).get_axis(0))
+                print (joyaxwone)
+                joyaxetwo = str(pygame.joystick.Joystick(0).get_axis(1))
+                joyaxethree = str(pygame.joystick.Joystick(0).get_axis(2))
+                joyaxefour = str(pygame.joystick.Joystick(0).get_axis(3))
+                print("Stick moving.")
             if event.type == pygame.JOYHATMOTION:
-                    print("D-Pad Moving.")
+                print("D-Pad Moving.")
