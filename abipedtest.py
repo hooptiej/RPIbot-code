@@ -71,6 +71,18 @@ else:
         for event in pygame.event.get(): # User did something
             if event.type == pygame.JOYBUTTONDOWN:
                 print("Joystick button pressed.")
+                button = str(pygame.joystick.Joystick(0).get_button(0))
+                button = str(pygame.joystick.Joystick(0).get_button(1))
+                button = str(pygame.joystick.Joystick(0).get_button(2))
+                button = str(pygame.joystick.Joystick(0).get_button(3))
+                button = str(pygame.joystick.Joystick(0).get_button(4))
+                button = str(pygame.joystick.Joystick(0).get_button(5))
+                button = str(pygame.joystick.Joystick(0).get_button(6))
+                button = str(pygame.joystick.Joystick(0).get_button(7))
+                button = str(pygame.joystick.Joystick(0).get_button(8))
+                button = str(pygame.joystick.Joystick(0).get_button(9))
+                button = str(pygame.joystick.Joystick(0).get_button(10))
+                button = str(pygame.joystick.Joystick(0).get_button(11))
             if event.type == pygame.JOYBUTTONUP:
                 print("Joystick button released.")
             if event.type == pygame.JOYAXISMOTION:
