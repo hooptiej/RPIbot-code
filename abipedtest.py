@@ -119,9 +119,15 @@ else:
                 if joyhat[1] == (1):
                     lanklepos = lanklepos + 3
                     ranklepos = ranklepos - 3
+                    lhippos = lhippos + 3
+                    rhippos = rhippos - 3
                 elif joyhat[1] == (-1):
                     lanklepos = lanklepos - 3
                     ranklepos = ranklepos + 3
+                    lhippos = lhippos - 3
+                    rhippos = rhippos + 3
             pwm.setPWM(lankle, 0, lanklepos)
             pwm.setPWM(rankle, 0, ranklepos)
+            pwm.setPWM(lhip, 0, lhippos)
+            pwm.setPWM(rhip, 0, rhippos)
             clock.tick(15)
