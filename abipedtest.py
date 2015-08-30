@@ -55,6 +55,9 @@ print "Biped Test Control center V.a"
 print " "
 print "Centering Servos"
 
+#trims
+
+
 pwm.setPWM(lwaist, 0, lwaistpos)
 pwm.setPWM(rwaist, 0, rwaistpos)
 pwm.setPWM(lfoot, 0, lfootpos)
@@ -128,7 +131,7 @@ else:
             if event.type == pygame.JOYHATMOTION:
                 print("D-Pad Moving.")
                 joyhat = (pygame.joystick.Joystick(0).get_hat(0))
-                print (joyhat)
+                #print (joyhat)
                 if joyhat[1] == (1):
                     lanklepos = lanklepos + 3
                     ranklepos = ranklepos - 3
@@ -140,35 +143,23 @@ else:
                     lhippos = lhippos - 3
                     rhippos = rhippos + 3
                 elif joyhat[0] == (1):
-                    lwaistpos = lwaistpos + 3
-                    rwaistpos = rwaistpos + 3
+                    #lwaistpos = lwaistpos + 3
+                    #rwaistpos = rwaistpos + 3
                     lfootpos = lfootpos + 3
                     rfootpos = rfootpos + 3
                 elif joyhat[0] == (-1):
-                    lwaistpos = lwaistpos - 3
-                    rwaistpos = rwaistpos - 3
+                    #lwaistpos = lwaistpos - 3
+                    #rwaistpos = rwaistpos - 3
                     lfootpos = lfootpos - 3
                     rfootpos = rfootpos - 3
-                pwm.setPWM(lwaist, 0, lwaistpos)
-                pwm.setPWM(rwaist, 0, rwaistpos)
-                pwm.setPWM(lfoot, 0, lfootpos)
-                pwm.setPWM(rfoot, 0, rfootpos)
-                print "Left foot position"
-                print(lfootpos)
-                print "Right foot pos"
-                print(rfootpos)
-                print "Left Ankle"
-                print (lanklepos)
-                print "Right Ankle"
-                print (ranklepos)
-                print "right hip"
-                print (lhippos)
-                print "left Hip"
-                print (rhippos)
-                pwm.setPWM(lankle, 0, lanklepos)
-                pwm.setPWM(rankle, 0, ranklepos)
-                pwm.setPWM(lhip, 0, lhippos)
-                pwm.setPWM(rhip, 0, rhippos)
-                pygame.time.wait(15)
+            pwm.setPWM(lwaist, 0, lwaistpos)
+            pwm.setPWM(rwaist, 0, rwaistpos)
+            pwm.setPWM(lfoot, 0, lfootpos)
+            pwm.setPWM(rfoot, 0, rfootpos)\
+            pwm.setPWM(lankle, 0, lanklepos)
+            pwm.setPWM(rankle, 0, ranklepos)
+            pwm.setPWM(lhip, 0, lhippos)
+            pwm.setPWM(rhip, 0, rhippos)
+            pygame.time.wait(15)
             pygame.event.pump()
             clock.tick(20)
