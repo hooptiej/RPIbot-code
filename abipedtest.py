@@ -123,3 +123,4 @@ else:
                     ranklepos = ranklepos + 3
                 pwm.setPWM(lankle, 0, lanklepos)
                 pwm.setPWM(rankle, 0, ranklepos)
+                clock.tick(15)
