@@ -82,4 +82,4 @@ else:
                 print("Stick moving.")
             if event.type == pygame.JOYHATMOTION:
                 print("D-Pad Moving.")
-                hat = str(joystick.get_hat(0))
+                hat = str(pygame.joystick.Joystick(0).get_hat(0))
