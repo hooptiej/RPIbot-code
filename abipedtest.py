@@ -121,6 +121,6 @@ else:
                 elif joyhat == 4:
                     lanklepos = lanklepos - 3
                     ranklepos = ranklepos + 3
-                pwm.setPWM(lankle, 0, lanklepos)
-                pwm.setPWM(rankle, 0, ranklepos)
-                clock.tick(15)
+            pwm.setPWM(lankle, 0, lanklepos)
+            pwm.setPWM(rankle, 0, ranklepos)
+            clock.tick(15)
