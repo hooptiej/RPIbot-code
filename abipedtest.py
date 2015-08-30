@@ -141,12 +141,12 @@ else:
                     rhippos = rhippos + 3
                 elif joyhat[0] == (1):
                     lwaistpos = lwaistpos + 3
-                    rwaistpos = rwaistpos - 3
+                    rwaistpos = rwaistpos + 3
                     lfootpos = lfootpos + 3
                     rfootpos = rfootpos + 3
                 elif joyhat[0] == (-1):
                     lwaistpos = lwaistpos - 3
-                    rwaistpos = rwaistpos + 3
+                    rwaistpos = rwaistpos - 3
                     lfootpos = lfootpos - 3
                     rfootpos = rfootpos - 3
                 pwm.setPWM(lwaist, 0, lwaistpos)
@@ -157,9 +157,13 @@ else:
                 print(lfootpos)
                 print "Right foot pos"
                 print(rfootpos)
+                print "Left Ankle"
                 print (lanklepos)
+                print "Right Ankle"
                 print (ranklepos)
+                print "right hip"
                 print (lhippos)
+                print "left Hip"
                 print (rhippos)
                 pwm.setPWM(lankle, 0, lanklepos)
                 pwm.setPWM(rankle, 0, ranklepos)
