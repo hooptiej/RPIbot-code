@@ -116,10 +116,10 @@ else:
                 print("D-Pad Moving.")
                 joyhat = (pygame.joystick.Joystick(0).get_hat(0))
                 print (joyhat)
-                if joyhat(0) == (1):
+                if joyhat[1] == (1):
                     lanklepos = lanklepos + 3
                     ranklepos = ranklepos - 3
-                elif joyhat(0) == (-1):
+                elif joyhat[1] == (-1):
                     lanklepos = lanklepos - 3
                     ranklepos = ranklepos + 3
             pwm.setPWM(lankle, 0, lanklepos)
