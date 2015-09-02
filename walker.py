@@ -27,8 +27,8 @@ rfoot = 2
 lhip = 11
 rhip = 4
 
-rwaist = 9
-lwaist = 6
+rwaist = 6
+lwaist = 9
 
 ranklepos = servoCenter
 lanklepos = servoCenter
@@ -83,7 +83,7 @@ while loop == 1:
     print " 4. Left Waist"
     print " Position = ",lwaistpos
     print " 0. to quit"
-    choice = input("Press a Number Now")
+    choice = input("Press a Number Now : ")
     if choice == 0:
         loop = 0
     elif choice == 1:
