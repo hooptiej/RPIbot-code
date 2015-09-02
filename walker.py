@@ -86,6 +86,6 @@ while loop == 1:
     if choice == 1:
         print "servo Center is"
         print (servoCenter)
-        choicetwo = input("Enter Position Number Now (210-450)")
-        lfootpos = int(input)
+        choicetwo = int(input("Enter Position Number Now (210-450)"))
+        lfootpos = choicetwo
         
