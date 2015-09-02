@@ -116,13 +116,13 @@ while loop == 1:
                 lfootpos = lfootpos - 1
                 pwm.setPWM(lfoot, 0, lfootpos)
                 dist = dist - 1
-                time.sleep(1)
+                time.sleep(.1)
         elif dist > 0:
             while dist > 0:
                 lfootpos = lfootpos + 1
                 pwm.setPWM(lfoot, 0, lfootpos)
                 dist = dist - 1
-                time.sleep(1)
+                time.sleep(.1)
         
     elif choice == 2:
         #left Ankle
