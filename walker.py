@@ -32,8 +32,8 @@ lwaist = 9
 
 ranklepos = servoCenter
 lanklepos = servoCenter
-rfootpos = servoCenter
-lfootpos = servoCenter
+rfootpos = 320
+lfootpos = 325
 rwaistpos = servoCenter
 lwaistpos = servoCenter
 rhippos = servoCenter
@@ -55,24 +55,24 @@ print " "
 print "Biped Test Control center V.a2"
 print " "
 print "Centering Servos"
+time.sleep(1)
 
-
+#center servos
+pwm.setPWM(lwaist, 0, lwaistpos)
+pwm.setPWM(rwaist, 0, rwaistpos)
+pwm.setPWM(lfoot, 0, lfootpos)
+pwm.setPWM(rfoot, 0, rfootpos)
+pwm.setPWM(lankle, 0, lanklepos)
+pwm.setPWM(rankle, 0, ranklepos)
+pwm.setPWM(lhip, 0, lhippos)
+pwm.setPWM(rhip, 0, rhippos)
 
 choice = 0
 loop = 1
 choicetwo = 0 
-choicejoytest = 0
 while loop == 1:
-    #center servos
-    pwm.setPWM(lwaist, 0, lwaistpos)
-    pwm.setPWM(rwaist, 0, rwaistpos)
-    pwm.setPWM(lfoot, 0, lfootpos)
-    pwm.setPWM(rfoot, 0, rfootpos)
-    pwm.setPWM(lankle, 0, lanklepos)
-    pwm.setPWM(rankle, 0, ranklepos)
-    pwm.setPWM(lhip, 0, lhippos)
-    pwm.setPWM(rhip, 0, rhippos)
     #print what options you have
+    clear()
     print " select a joint to move"
     print " 1. Left Foot"
     print " Position = ",lfootpos
@@ -95,28 +95,44 @@ while loop == 1:
     if choice == 0:
         loop = 0
     elif choice == 1:
+        #Left foot
         choicetwo = int(input("Enter Position Number Now (210-450)"))
         lfootpos = choicetwo
+        pwm.setPWM(lfoot, 0, lfootpos)
     elif choice == 2:
+        #left Ankle
         choicetwo = int(input("Enter Position Number Now (210-450)"))
         lanklepos = choicetwo
+        pwm.setPWM(lankle, 0, lanklepos)
     elif choice == 3:
+        #left Hip
         choicetwo = int(input("Enter Position Number Now (210-450)"))
         lhippos = choicetwo
+        pwm.setPWM(lhip, 0, lhippos)
     elif choice == 4:
+        #Left Waist
         choicetwo = int(input("Enter Position Number Now (210-450)"))
         lwaistpos = choicetwo
+        pwm.setPWM(lwaist, 0, lwaistpos)
     elif choice == 5:
+        #right Foot
         choicetwo = int(input("Enter Position Number Now (210-450)"))
         rfootpos = choicetwo
+        pwm.setPWM(rfoot, 0, rfootpos)
     elif choice == 6:
+        # Right Ankle
         choicetwo = int(input("Enter Position Number Now (210-450)"))
         ranklepos = choicetwo
+        pwm.setPWM(rankle, 0, ranklepos)
     elif choice == 7:
+        #right hip
         choicetwo = int(input("Enter Position Number Now (210-450)"))
         rhippos = choicetwo
+        pwm.setPWM(rhip, 0, rhippos)
     elif choice == 8:
+        #right waist
         choicetwo = int(input("Enter Position Number Now (210-450)"))
         rwaistpos = choicetwo
+        pwm.setPWM(rhip, 0, rhippos)
     else:
         print " Try again Bozo "
