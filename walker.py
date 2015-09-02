@@ -82,6 +82,14 @@ while loop == 1:
     print " Position = ",lhippos
     print " 4. Left Waist"
     print " Position = ",lwaistpos
+    print " 5. Right Foot"
+    print " Position = ",rfootpos
+    print " 6. Right Ankle"
+    print " Position = ",ranklepos
+    print " 7. Right Hip"
+    print " Position = ",rhippos
+    print " 8. Right Waist"
+    print " Position = ",rwaistpos
     print " 0. to quit"
     choice = input("Press a Number Now : ")
     if choice == 0:
@@ -98,5 +106,17 @@ while loop == 1:
     elif choice == 4:
         choicetwo = int(input("Enter Position Number Now (210-450)"))
         lwaistpos = choicetwo
+    elif choice == 5:
+        choicetwo = int(input("Enter Position Number Now (210-450)"))
+        rfootpos = choicetwo
+    elif choice == 6:
+        choicetwo = int(input("Enter Position Number Now (210-450)"))
+        ranklepos = choicetwo
+    elif choice == 7:
+        choicetwo = int(input("Enter Position Number Now (210-450)"))
+        rhippos = choicetwo
+    elif choice == 8:
+        choicetwo = int(input("Enter Position Number Now (210-450)"))
+        rwaistpos = choicetwo
     else:
         print " Try again Bozo "
