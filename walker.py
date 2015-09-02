@@ -30,14 +30,24 @@ rhip = 4
 rwaist = 6
 lwaist = 9
 
-ranklepos = servoCenter
-lanklepos = servoCenter
-rfootpos = 320
-lfootpos = 325
-rwaistpos = servoCenter
-lwaistpos = servoCenter
-rhippos = servoCenter
-lhippos = servoCenter
+lfootpos = 325      #1
+
+rfootpos = 300      #5
+
+
+lanklepos = 210     #2
+
+ranklepos = 440     #6
+
+
+lhippos = 440       #3
+
+rhippos = 200       #7
+
+
+lwaistpos = 340     #4
+
+rwaistpos = 350     #8
 
 
 def setServoPulse(channel, pulse):
