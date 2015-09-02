@@ -40,9 +40,9 @@ lanklepos = 210     #2
 ranklepos = 440     #6
 
 
-lhippos = 440       #3
+lhippos = 350       #3
 
-rhippos = 200       #7
+rhippos = 350       #7
 
 
 lwaistpos = 340     #4
