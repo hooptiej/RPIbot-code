@@ -133,6 +133,6 @@ while loop == 1:
         #right waist
         choicetwo = int(input("Enter Position Number Now (210-450)"))
         rwaistpos = choicetwo
-        pwm.setPWM(rhip, 0, rhippos)
+        pwm.setPWM(rwaist, 0, rwaistpos)
     else:
         print " Try again Bozo "
