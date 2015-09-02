@@ -124,20 +124,59 @@ while loop == 1:
                 time.sleep(.02)
         
     elif choice == 2:
-        #left Ankle
+        #Left ankle
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        lanklepos = choicetwo
-        pwm.setPWM(lankle, 0, lanklepos)
+        dist = choicetwo - lanklepos
+        print "traveling ",dist
+        if dist < 0:
+            dist = dist * -1
+            while dist > 0:
+                lanklepos = lanklepos - 1
+                pwm.setPWM(lankle, 0, lanklepos)
+                dist = dist - 1
+                time.sleep(.02)
+        elif dist > 0:
+            while dist > 0:
+                lanklepos = lanklepos + 1
+                pwm.setPWM(lankle, 0, lanklepos)
+                dist = dist - 1
+                time.sleep(.02)
     elif choice == 3:
-        #left Hip
+        #Left hip
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        lhippos = choicetwo
-        pwm.setPWM(lhip, 0, lhippos)
+        dist = choicetwo - lhippos
+        print "traveling ",dist
+        if dist < 0:
+            dist = dist * -1
+            while dist > 0:
+                lhippos = lhippos - 1
+                pwm.setPWM(lhip, 0, lhippos)
+                dist = dist - 1
+                time.sleep(.02)
+        elif dist > 0:
+            while dist > 0:
+                lhippos = lhippos + 1
+                pwm.setPWM(lhip, 0, lhippos)
+                dist = dist - 1
+                time.sleep(.02)
     elif choice == 4:
-        #Left Waist
+        #Left waist
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        lwaistpos = choicetwo
-        pwm.setPWM(lwaist, 0, lwaistpos)
+        dist = choicetwo - lwaistpos
+        print "traveling ",dist
+        if dist < 0:
+            dist = dist * -1
+            while dist > 0:
+                lwaistpos = lwaistpos - 1
+                pwm.setPWM(lwaist, 0, lwaistpos)
+                dist = dist - 1
+                time.sleep(.02)
+        elif dist > 0:
+            while dist > 0:
+                lwaistpos = lwaistpos + 1
+                pwm.setPWM(lwaist, 0, lwaistpos)
+                dist = dist - 1
+                time.sleep(.02)
     elif choice == 5:
         #right Foot
         choicetwo = int(input("Enter Position Number Now (210-450)"))
