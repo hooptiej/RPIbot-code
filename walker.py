@@ -57,12 +57,35 @@ print " "
 print "Centering Servos"
 
 
-pwm.setPWM(lwaist, 0, lwaistpos)
-pwm.setPWM(rwaist, 0, rwaistpos)
-pwm.setPWM(lfoot, 0, lfootpos)
-pwm.setPWM(rfoot, 0, rfootpos)
-pwm.setPWM(lankle, 0, lanklepos)
-pwm.setPWM(rankle, 0, ranklepos)
-pwm.setPWM(lhip, 0, lhippos)
-pwm.setPWM(rhip, 0, rhippos)
 
+choice = 0
+loop = 1
+choicetwo = 0 
+choicejoytest = 0
+while loop == 1:
+    #center servos
+    pwm.setPWM(lwaist, 0, lwaistpos)
+    pwm.setPWM(rwaist, 0, rwaistpos)
+    pwm.setPWM(lfoot, 0, lfootpos)
+    pwm.setPWM(rfoot, 0, rfootpos)
+    pwm.setPWM(lankle, 0, lanklepos)
+    pwm.setPWM(rankle, 0, ranklepos)
+    pwm.setPWM(lhip, 0, lhippos)
+    pwm.setPWM(rhip, 0, rhippos)
+    #print what options you have
+    print " select a joint to move"
+    print " 1. Left Foot"
+    print " Position = " + lfootpos
+    print " 2. Left Ankle"
+    print " 3. Left Hip"
+    print " 4. Left Waist"
+    print " 0. to quit"
+    choice = input("Press a Number Now")
+    if choice == 0:
+        loop = 0
+    if choice == 1:
+        print "servo Center is"
+        print (servoCenter)
+        choicetwo = input("Enter Position Number Now (210-450)")
+        lfootpos = input
+        
