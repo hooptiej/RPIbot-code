@@ -107,8 +107,20 @@ while loop == 1:
     elif choice == 1:
         #Left foot
         choicetwo = int(input("Enter Position Number Now (210-450)"))
+        dist = choicetwo - lfootpos
         lfootpos = choicetwo
-        pwm.setPWM(lfoot, 0, lfootpos)
+        if dist < 0
+            dist = dist * -1
+            while diff > 0:
+                lfootpos = lfootpos - 1
+                pwm.setPWM(lfoot, 0, lfootpos)
+                diff = diff - 1
+        else 
+        while diff > 0:
+            lfootpos = lfootpos + 1
+            pwm.setPWM(lfoot, 0, lfootpos)
+            diff = diff - 1
+        
     elif choice == 2:
         #left Ankle
         choicetwo = int(input("Enter Position Number Now (210-450)"))
