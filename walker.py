@@ -75,7 +75,7 @@ while loop == 1:
     #print what options you have
     print " select a joint to move"
     print " 1. Left Foot"
-    print " Position = " + lfootpos
+    print " Position = ",lfootpos
     print " 2. Left Ankle"
     print " 3. Left Hip"
     print " 4. Left Waist"
