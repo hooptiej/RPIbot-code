@@ -115,13 +115,13 @@ while loop == 1:
                 lfootpos = lfootpos - 1
                 pwm.setPWM(lfoot, 0, lfootpos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
         elif dist > 0:
             while dist > 0:
                 lfootpos = lfootpos + 1
                 pwm.setPWM(lfoot, 0, lfootpos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
         
     elif choice == 2:
         #Left ankle
@@ -134,13 +134,13 @@ while loop == 1:
                 lanklepos = lanklepos - 1
                 pwm.setPWM(lankle, 0, lanklepos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
         elif dist > 0:
             while dist > 0:
                 lanklepos = lanklepos + 1
                 pwm.setPWM(lankle, 0, lanklepos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
     elif choice == 3:
         #Left hip
         choicetwo = int(input("Enter Position Number Now (210-450)"))
@@ -152,13 +152,13 @@ while loop == 1:
                 lhippos = lhippos - 1
                 pwm.setPWM(lhip, 0, lhippos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
         elif dist > 0:
             while dist > 0:
                 lhippos = lhippos + 1
                 pwm.setPWM(lhip, 0, lhippos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
     elif choice == 4:
         #Left waist
         choicetwo = int(input("Enter Position Number Now (210-450)"))
@@ -170,13 +170,13 @@ while loop == 1:
                 lwaistpos = lwaistpos - 1
                 pwm.setPWM(lwaist, 0, lwaistpos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
         elif dist > 0:
             while dist > 0:
                 lwaistpos = lwaistpos + 1
                 pwm.setPWM(lwaist, 0, lwaistpos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
     elif choice == 5:
         #right foot
         choicetwo = int(input("Enter Position Number Now (210-450)"))
@@ -188,13 +188,13 @@ while loop == 1:
                 rfootpos = rfootpos - 1
                 pwm.setPWM(rfoot, 0, rfootpos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
         elif dist > 0:
             while dist > 0:
                 rfootpos = rfootpos + 1
                 pwm.setPWM(rfoot, 0, rfootpos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
     elif choice == 6:
         #right ankle
         choicetwo = int(input("Enter Position Number Now (210-450)"))
@@ -206,13 +206,13 @@ while loop == 1:
                 ranklepos = ranklepos - 1
                 pwm.setPWM(rankle, 0, ranklepos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
         elif dist > 0:
             while dist > 0:
                 ranklepos = ranklepos + 1
                 pwm.setPWM(rankle, 0, ranklepos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
     elif choice == 7:
         #right hip
         choicetwo = int(input("Enter Position Number Now (210-450)"))
@@ -224,13 +224,13 @@ while loop == 1:
                 rhippos = rhippos - 1
                 pwm.setPWM(rhip, 0, rhippos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
         elif dist > 0:
             while dist > 0:
                 rhippos = rhippos + 1
                 pwm.setPWM(rhip, 0, rhippos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
     elif choice == 8:
         #right waist
         choicetwo = int(input("Enter Position Number Now (210-450)"))
@@ -242,12 +242,12 @@ while loop == 1:
                 rwaistpos = rwaistpos - 1
                 pwm.setPWM(rwaist, 0, rwaistpos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
         elif dist > 0:
             while dist > 0:
                 rwaistpos = rwaistpos + 1
                 pwm.setPWM(rwaist, 0, rwaistpos)
                 dist = dist - 1
-                time.sleep(.01)
+                time.sleep(.005)
     else:
         print " Try again Bozo "
