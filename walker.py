@@ -249,6 +249,6 @@ while loop == 1:
     elif choice == 0:
         choicetwo = input("Press 1 for squat and stand test")
         if choicetwo ==1:
-            
+            print "sruff"
     else:
         print " Try again Bozo "
