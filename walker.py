@@ -99,7 +99,7 @@ while loop == 1:
     print " 0. for chorded test"
     print " Press Q to Quit"
     choice = raw_input("Press a Number Now : ")
-    if choice = Q:
+    if choice == 'Q':
         loop = 0
     elif choice == 1:
         #Left foot
