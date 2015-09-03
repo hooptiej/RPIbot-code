@@ -18,36 +18,32 @@ servoCenter = 330 # math center
 servoMax = 450  # Max pulse length out of 4096
 
 # set servo channels
-lankle = 15
-rankle = 0
+la = 15
+ra = 0
 
-lfoot = 13
-rfoot = 2
+lf = 13
+rf = 2
 
-lhip = 11
-rhip = 4
+lh = 11
+rh = 4
 
-rwaist = 6
-lwaist = 9
+rw = 6
+lw = 9
 
-lfootpos = 325      #1
-
-rfootpos = 300      #5
-
-
-lanklepos = 210     #2
-
-ranklepos = 440     #6
+lfpos = 325      #1
+rfpos = 300      #5
 
 
-lhippos = 350       #3
+lapos = 210     #2
+rapos = 410     #6
 
-rhippos = 350       #7
+
+lhpos = 350       #3
+rhpos = 350       #7
 
 
-lwaistpos = 340     #4
-
-rwaistpos = 350     #8
+lwpos = 340     #4
+rwpos = 350     #8
 
 
 def setServoPulse(channel, pulse):
@@ -68,14 +64,14 @@ print "Centering Servos"
 time.sleep(1)
 
 #center servos
-pwm.setPWM(lwaist, 0, lwaistpos)
-pwm.setPWM(rwaist, 0, rwaistpos)
-pwm.setPWM(lfoot, 0, lfootpos)
-pwm.setPWM(rfoot, 0, rfootpos)
-pwm.setPWM(lankle, 0, lanklepos)
-pwm.setPWM(rankle, 0, ranklepos)
-pwm.setPWM(lhip, 0, lhippos)
-pwm.setPWM(rhip, 0, rhippos)
+pwm.setPWM(lw, 0, lwpos)
+pwm.setPWM(rw, 0, rwpos)
+pwm.setPWM(lf, 0, lfpos)
+pwm.setPWM(rf, 0, rfpos)
+pwm.setPWM(la, 0, lapos)
+pwm.setPWM(ra, 0, rapos)
+pwm.setPWM(lh, 0, lhpos)
+pwm.setPWM(rh, 0, rhpos)
 
 choice = 0
 loop = 1
@@ -85,169 +81,174 @@ while loop == 1:
     clear()
     print " select a joint to move"
     print " 1. Left Foot"
-    print " Position = ",lfootpos
+    print " Position = ",lfpos
     print " 2. Left Ankle"
-    print " Position = ",lanklepos
+    print " Position = ",lapos
     print " 3. Left Hip"
-    print " Position = ",lhippos
+    print " Position = ",lhpos
     print " 4. Left Waist"
-    print " Position = ",lwaistpos
+    print " Position = ",lwpos
     print " 5. Right Foot"
-    print " Position = ",rfootpos
+    print " Position = ",rfpos
     print " 6. Right Ankle"
-    print " Position = ",ranklepos
+    print " Position = ",rapos
     print " 7. Right Hip"
-    print " Position = ",rhippos
+    print " Position = ",rhpos
     print " 8. Right Waist"
-    print " Position = ",rwaistpos
-    print " 0. to quit"
+    print " Position = ",rwpos
+    print " 0. for chorded test"
+    print " Press Q to Quit"
     choice = input("Press a Number Now : ")
-    if choice == 0:
+    if choice == Q:
         loop = 0
     elif choice == 1:
         #Left foot
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        dist = choicetwo - lfootpos
+        dist = choicetwo - lfpos
         print "traveling ",dist
         if dist < 0:
             dist = dist * -1
             while dist > 0:
-                lfootpos = lfootpos - 1
-                pwm.setPWM(lfoot, 0, lfootpos)
+                lfpos = lfpos - 1
+                pwm.setPWM(lf, 0, lfpos)
                 dist = dist - 1
                 time.sleep(.005)
         elif dist > 0:
             while dist > 0:
-                lfootpos = lfootpos + 1
-                pwm.setPWM(lfoot, 0, lfootpos)
+                lfpos = lfpos + 1
+                pwm.setPWM(lf, 0, lfpos)
                 dist = dist - 1
                 time.sleep(.005)
         
     elif choice == 2:
         #Left ankle
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        dist = choicetwo - lanklepos
+        dist = choicetwo - lapos
         print "traveling ",dist
         if dist < 0:
             dist = dist * -1
             while dist > 0:
-                lanklepos = lanklepos - 1
-                pwm.setPWM(lankle, 0, lanklepos)
+                lapos = lapos - 1
+                pwm.setPWM(la, 0, lapos)
                 dist = dist - 1
                 time.sleep(.005)
         elif dist > 0:
             while dist > 0:
-                lanklepos = lanklepos + 1
-                pwm.setPWM(lankle, 0, lanklepos)
+                lapos = lapos + 1
+                pwm.setPWM(la, 0, lapos)
                 dist = dist - 1
                 time.sleep(.005)
     elif choice == 3:
         #Left hip
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        dist = choicetwo - lhippos
+        dist = choicetwo - lhpos
         print "traveling ",dist
         if dist < 0:
             dist = dist * -1
             while dist > 0:
-                lhippos = lhippos - 1
-                pwm.setPWM(lhip, 0, lhippos)
+                lhpos = lhpos - 1
+                pwm.setPWM(lh, 0, lhpos)
                 dist = dist - 1
                 time.sleep(.005)
         elif dist > 0:
             while dist > 0:
-                lhippos = lhippos + 1
-                pwm.setPWM(lhip, 0, lhippos)
+                lhpos = lhpos + 1
+                pwm.setPWM(lh, 0, lhpos)
                 dist = dist - 1
                 time.sleep(.005)
     elif choice == 4:
         #Left waist
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        dist = choicetwo - lwaistpos
+        dist = choicetwo - lwpos
         print "traveling ",dist
         if dist < 0:
             dist = dist * -1
             while dist > 0:
-                lwaistpos = lwaistpos - 1
-                pwm.setPWM(lwaist, 0, lwaistpos)
+                lwpos = lwpos - 1
+                pwm.setPWM(lw, 0, lwpos)
                 dist = dist - 1
                 time.sleep(.005)
         elif dist > 0:
             while dist > 0:
-                lwaistpos = lwaistpos + 1
-                pwm.setPWM(lwaist, 0, lwaistpos)
+                lwpos = lwpos + 1
+                pwm.setPWM(lw, 0, lwpos)
                 dist = dist - 1
                 time.sleep(.005)
     elif choice == 5:
         #right foot
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        dist = choicetwo - rfootpos
+        dist = choicetwo - rfpos
         print "traveling ",dist
         if dist < 0:
             dist = dist * -1
             while dist > 0:
-                rfootpos = rfootpos - 1
-                pwm.setPWM(rfoot, 0, rfootpos)
+                rfpos = rfpos - 1
+                pwm.setPWM(rf, 0, rfpos)
                 dist = dist - 1
                 time.sleep(.005)
         elif dist > 0:
             while dist > 0:
-                rfootpos = rfootpos + 1
-                pwm.setPWM(rfoot, 0, rfootpos)
+                rfpos = rfpos + 1
+                pwm.setPWM(rf, 0, rfpos)
                 dist = dist - 1
                 time.sleep(.005)
     elif choice == 6:
         #right ankle
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        dist = choicetwo - ranklepos
+        dist = choicetwo - rapos
         print "traveling ",dist
         if dist < 0:
             dist = dist * -1
             while dist > 0:
-                ranklepos = ranklepos - 1
-                pwm.setPWM(rankle, 0, ranklepos)
+                rapos = rapos - 1
+                pwm.setPWM(ra, 0, rapos)
                 dist = dist - 1
                 time.sleep(.005)
         elif dist > 0:
             while dist > 0:
-                ranklepos = ranklepos + 1
-                pwm.setPWM(rankle, 0, ranklepos)
+                rapos = rapos + 1
+                pwm.setPWM(ra, 0, rapos)
                 dist = dist - 1
                 time.sleep(.005)
     elif choice == 7:
         #right hip
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        dist = choicetwo - rhippos
+        dist = choicetwo - rhpos
         print "traveling ",dist
         if dist < 0:
             dist = dist * -1
             while dist > 0:
-                rhippos = rhippos - 1
-                pwm.setPWM(rhip, 0, rhippos)
+                rhpos = rhpos - 1
+                pwm.setPWM(rh, 0, rhpos)
                 dist = dist - 1
                 time.sleep(.005)
         elif dist > 0:
             while dist > 0:
-                rhippos = rhippos + 1
-                pwm.setPWM(rhip, 0, rhippos)
+                rhpos = rhpos + 1
+                pwm.setPWM(rh, 0, rhpos)
                 dist = dist - 1
                 time.sleep(.005)
     elif choice == 8:
         #right waist
         choicetwo = int(input("Enter Position Number Now (210-450)"))
-        dist = choicetwo - rwaistpos
+        dist = choicetwo - rwpos
         print "traveling ",dist
         if dist < 0:
             dist = dist * -1
             while dist > 0:
-                rwaistpos = rwaistpos - 1
-                pwm.setPWM(rwaist, 0, rwaistpos)
+                rwpos = rwpos - 1
+                pwm.setPWM(rw, 0, rwpos)
                 dist = dist - 1
                 time.sleep(.005)
         elif dist > 0:
             while dist > 0:
-                rwaistpos = rwaistpos + 1
-                pwm.setPWM(rwaist, 0, rwaistpos)
+                rwpos = rwpos + 1
+                pwm.setPWM(rw, 0, rwpos)
                 dist = dist - 1
                 time.sleep(.005)
+    elif choice == 0:
+        choicetwo = input("Press 1 for squat and stand test")
+        if choicetwo ==1:
+            
     else:
         print " Try again Bozo "
